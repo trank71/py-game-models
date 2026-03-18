@@ -12,3 +12,8 @@ class Skill(models.Model):
     race = models.ForeignKey(Race, on_delete=models.CASCADE)
 
 
+class Guild(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    description = models.TextField(null=True)
+
+
