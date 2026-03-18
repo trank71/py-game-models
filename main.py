@@ -10,7 +10,7 @@ def main() -> None:
         players = json.load(players_file)
         for player, player_info in players.items():
             race, _ = Race.objects.get_or_create(
-                name= player_info["race"]["name"],
+                name=player_info["race"]["name"],
                 defaults={
                     "description": player_info["race"]["description"],
                 },
