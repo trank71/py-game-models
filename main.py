@@ -10,10 +10,10 @@ def main() -> None:
         players = json.load(players_file)
         for player in players:
             race, _ = Race.objects.get_or_create(
-                        name=player["race"]["name"],
-                        defaults={
-                            "description": player["race"]["description"]
-                        }
+                name=player["race"]["name"],
+                defaults={
+                    "description": player["race"]["description"],
+                },
             )
 
             for skill in player["race"]["skills"]:
